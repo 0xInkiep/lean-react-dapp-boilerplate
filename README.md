@@ -14,7 +14,7 @@ Features:
 It is pretty easy to start working on top of it without learning anything new, just navigate to the `src/` dir and inspect the files that create the dApp.
 
 ### 1. Install dependencies
-`npm install`
+`npm install` or `npm install --legacy-peer-deps` if you are getting errors.
 
 ### 2. Start dev server
 `npm start`
