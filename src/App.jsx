@@ -40,7 +40,7 @@ import Credits from './screens/Credits';
 const Dapp = () => <WagmiConfig client={wagmiClient}>
   <RainbowKitProvider chains={chains}>
     <GlobalStyle />
-    <Router basename={location.hostname == '0xinkiep.github.io' ? 'https://0xinkiep.github.io/lean-react-dapp-boilerplate/' : undefined}>
+    <Router basename={location.hostname == '0xinkiep.github.io' ? '/lean-react-dapp-boilerplate/' : undefined}>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/credits" element={<Credits />} />
