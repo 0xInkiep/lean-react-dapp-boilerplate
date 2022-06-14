@@ -1,13 +1,13 @@
 import React from "react";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { NavLink } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Grid, Row, Col } from "react-flexbox-grid";
 
 const NavBar = () => <Navigation>
   <Grid fluid>
-    <Row>
-      <Col xs={6} middle="xs">
+    <Row middle="xs">
+      <Col xs={12} md={6}>
         <Row>
           <Col>
             <CustomNavLink to="/">
@@ -16,7 +16,7 @@ const NavBar = () => <Navigation>
           </Col>
           <Col>
             <CustomNavLink to="/credits">
-              Donate
+              Support this project
             </CustomNavLink>
           </Col>
           <Col>
@@ -29,16 +29,16 @@ const NavBar = () => <Navigation>
               Use this template
             </CustomLink>
           </Col>
-          <Col>
+        </Row>
+      </Col>
+      <Col xs={12} md={6}>
+        <Row end="md" start="xs" middle="xs">
+          <Col xs={12} md={6}>
             <CustomLink href="https://twitter.com/0xInkiep">
               Made with 🖤 by 0xInkiep
             </CustomLink>
           </Col>
-        </Row>
-      </Col>
-      <Col xs={6}>
-        <Row end="xs">
-          <Col>
+          <Col xs={12} md={6}>
             <ConnectButton />
           </Col>
         </Row>
@@ -65,23 +65,11 @@ const Navigation = styled.nav`
   width: 100%;
 `;
 
-const CustomLink = styled.a`
+const linkStyles = css`
   text-decoration: none;
-  padding: 10px;
-  color: #fff;
-
-  &:hover {
-    background-color: #36297A;
-  }
-`;
-
-const CustomNavLink = styled((props) => {
-  return <NavLink
-    className={({ isActive }) => isActive ? 'active' : undefined }
-    {...props} />;
-})`
-  text-decoration: none;
-  padding: 10px;
+  padding: 15px;
+  height: 2em;
+  line-height: 45px;
   color: #fff;
 
   &:hover {
@@ -91,4 +79,16 @@ const CustomNavLink = styled((props) => {
   &.active {
     background-color: #36297A;
   }
+`
+
+const CustomLink = styled.a`
+  ${linkStyles}
+`;
+
+const CustomNavLink = styled((props) => {
+  return <NavLink
+    className={({ isActive }) => isActive ? 'active' : undefined }
+    {...props} />;
+})`
+  ${linkStyles}
 `;

@@ -15,4 +15,13 @@ export default createGlobalStyle`
     font-size: 32px;
     font-weight: bold;
   }
+
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  b {
+    font-weight: bold;
+  }
 `;
