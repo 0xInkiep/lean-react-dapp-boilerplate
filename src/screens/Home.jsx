@@ -2,7 +2,6 @@ import React from "react";
 import { useSignMessage } from 'wagmi';
 
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
 
 import StyledButton from "../components/StyledButton";
 import pepeMeme from '../../assets/img/pepe.svg';
