@@ -20,8 +20,13 @@ const NavBar = () => <Navigation>
             </CustomNavLink>
           </Col>
           <Col>
-            <CustomLink href="https://github.com/0xInkiep/lean-react-dapp-boilerplate">
+            <CustomLink target="_blank" href="https://github.com/0xInkiep/lean-react-dapp-boilerplate">
               GitHub
+            </CustomLink>
+          </Col>
+          <Col>
+            <CustomLink target="_blank" href="https://github.com/0xInkiep/lean-react-dapp-boilerplate/generate">
+              Use this template
             </CustomLink>
           </Col>
           <Col>
